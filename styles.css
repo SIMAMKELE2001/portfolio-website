@@ -1,0 +1,519 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Schoolbell&family=Story+Script&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Schoolbell", cursive;
+  background: rgb(212, 217, 217);
+  background-image:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(255, 93, 93, 0.08) 0,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 92% 25%,
+      rgba(76, 154, 255, 0.09) 0,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 50% 85%,
+      rgba(62, 207, 142, 0.08) 0,
+      transparent 45%
+    );
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h1,
+h2,
+h3 {
+  font-family: "Schoolbell", cursive;
+}
+
+.navbar {
+  position: sticky;
+  background: whitesmoke;
+  border-bottom: 4px solid #2b2540;
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.my-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+.my-badge .block-icon {
+  width: 38px;
+  height: 38px;
+  background: #000000;
+  border-radius: 9px;
+  border: 3px solid #eb0101;
+  box-shadow: 0 4px 0 #ffffff;
+}
+
+.my-badge span {
+  font-family: "Schoolbell", cursive;
+  font-weight: 800;
+  font-size: 19px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.nav-list a {
+  font-family: "Schoolbell", cursive;
+  font-weight: 700;
+  font-size: 13.5px;
+  padding: 9px 16px;
+  border-radius: 10px;
+  border: 3px solid #2b2540;
+  background: #ffc94a;
+  box-shadow: 0 8px 0 rgba(43, 37, 64, 0.18);
+  transition:
+    transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.nav-list a:nth-child(2) {
+  background: #4c9aff;
+}
+.nav-list a:nth-child(3) {
+  background: #3ecf8e;
+}
+.nav-list a:nth-child(4) {
+  background: #9b7fe8;
+  color: #fff;
+}
+.nav-list a:nth-child(5) {
+  background: #ff5d5d;
+  color: #fff;
+}
+.nav-list a:hover {
+  transform: translateY(-4px) rotate(-2deg);
+  box-shadow: 0 12px 0 rgba(43, 37, 64, 0.18);
+}
+.nav-list a:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 rgba(43, 37, 64, 0.18);
+}
+
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 28px;
+  position: relative;
+  z-index: 1;
+}
+section {
+  scroll-margin-top: 90px;
+  padding: 90px 0;
+}
+.tag-h {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Schoolbell", cursive;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 6px 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 0 rgba(43, 37, 64, 0.18);
+  margin-top: 20px;
+}
+.tag-a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Schoolbell", cursive;
+  border-style: dotted;
+  border-radius: 10px;
+  background-color: #4c9aff;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 6px 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 0 rgba(43, 37, 64, 0.18);
+}
+.tag-p {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Schoolbell", cursive;
+  color: white;
+  border-style: dotted;
+  border-radius: 10px;
+  background-color: #3ecf8e;
+  border-color: black;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 6px 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 0 rgba(43, 37, 64, 0.18);
+}
+.tag-s {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  font-family: "Schoolbell", cursive;
+  border-style: dotted;
+  border-color: black;
+  border-radius: 10px;
+  background-color: #9b7fe8;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 6px 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 0 rgba(43, 37, 64, 0.18);
+}
+.tag-h .active-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #3ecf8e;
+}
+
+.hero-section {
+  text-align: center;
+  padding-top: 60px;
+  position: relative;
+  padding: 0;
+}
+.name-divs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+.letter-block {
+  width: 56px;
+  height: 56px;
+  border: 3px solid #2b2540;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Schoolbell";
+  font-weight: 800;
+  font-size: 30px;
+  color: #fff;
+  box-shadow: 0 8px 0 rgba(43, 37, 64, 0.18);
+  animation: dropIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+.hero-section p.bio {
+  font-size: 16px;
+  color: #726b8a;
+  max-width: 460px;
+  margin: 20px auto 8px;
+  font-weight: 600;
+}
+.hero-section p.bio .role {
+  color: #2b2540;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 34px;
+  flex-wrap: wrap;
+}
+
+.hero-actions a {
+  font-family: "Schoolbell";
+  font-weight: 700;
+  font-size: 17px;
+  margin-top: -20px;
+  border-radius: 14px;
+}
+
+.hero-actions i {
+  color: #4c9aff;
+  font-size: 25px;
+}
+
+.hero-actions a :hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 0 #4c9aff;
+}
+
+#about-section {
+  padding: 0;
+}
+.photos-container {
+  display: flex;
+  flex: left;
+  flex-direction: row;
+}
+.photo1 {
+  width: 30px;
+}
+
+.about-text {
+  background: var(--paper);
+  border-radius: 4px;
+  padding: 30px 32px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.about-text .chapter-title {
+  font-family: "Schoolbell", cursive;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+  transition: opacity 0.3s ease;
+}
+.about-text .chapter-body {
+  font-size: 14.5px;
+  color: var(--muted);
+  font-weight: 500;
+  min-height: 70px;
+  transition: opacity 0.3s ease;
+}
+.about-text .fading {
+  opacity: 0;
+}
+
+.stack-hint {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 10px;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+.section-head h2 {
+  font-size: 28px;
+}
+
+.brick-grid {
+  display: grid;
+  gap: 26px;
+}
+.project-pre {
+  background: #ffffff;
+  border: 4px solid #2b2540;
+  border-radius: 18px;
+  padding: 26px 22px 22px;
+  position: relative;
+  box-shadow: 0 8px 0 rgba(43, 37, 64, 0.18);
+  transition:
+    transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.project-pre h3 {
+  font-size: 19px;
+  margin: 6px 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.project-pre .new-tag {
+  font-family: "Schoolbell", cursive;
+  font-size: 10px;
+  font-weight: 800;
+  color: #fff;
+  background: #ff5d5d;
+  padding: 2px 8px;
+  border-radius: 8px;
+  border: 2px solid #2b2540;
+}
+.project-pre p {
+  color: #726b8a;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+.stacks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-bottom: 16px;
+}
+.stack {
+  font-family: "Schoolbell", cursive;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 4px 11px;
+  border-radius: 20px;
+  border: 2px solid #2b2540;
+  background: #fff8ed;
+}
+
+.skill-wrap {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: center;
+}
+.skill {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 6px;
+  align-items: center;
+}
+.skill-block {
+  width: 150px;
+  height: 34px;
+  border: 3px solid #2b2540;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Schoolbell", cursive;
+  font-weight: 700;
+  font-size: 12.5px;
+  color: #fff;
+  transform: scale(0);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 0 rgba(43, 37, 64, 0.15);
+}
+.skill-block.show {
+  transform: scale(1);
+}
+.skill-label-label {
+  margin-top: 14px;
+  font-family: "Schoolbell", cursive;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+}
+.skill-label .lvl {
+  display: block;
+  font-family: "Schoolbell", cursive;
+  font-weight: 700;
+  color: #726b8a;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.email {
+  background: #2b2540;
+  color: #fff;
+  border-radius: 26px;
+  padding: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+  border: 4px solid #2b2540;
+}
+.mailbox-card::before {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 201, 74, 0.18),
+    transparent 70%
+  );
+  top: -60px;
+  right: -40px;
+}
+.email h2 {
+  font-size: 25px;
+  max-width: 360px;
+  position: relative;
+}
+.email .sub {
+  font-family: "Schoolbell", cursive;
+  font-weight: 600;
+  color: #c9c4e0;
+  margin-top: 10px;
+  font-size: 13.5px;
+  position: relative;
+}
+.email .email-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Schoolbell", cursive;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 6px 16px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 0 rgba(43, 37, 64, 0.18);
+  margin-top: 20px;
+  background: #ffc94a;
+  color: #2b2540;
+}
+
+footer {
+  text-align: center;
+  padding: 34px 0 50px;
+  font-weight: 700;
+  color: #726b8a;
+  font-size: 1px;
+}
+footer span.accent {
+  color: #ff5d5d;
+}
+
+.hero-blocks {
+  gap: 5px;
+}
+.letter-block {
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+}
+.navbar {
+  justify-content: center;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #2b2540;
+  outline-offset: 2px;
+}
+.footer a {
+  display: flex;
+  gap: 100px;
+}
+
+.social-icons a {
+  color: #2b2540;
+  font-size: 60px;
+}
