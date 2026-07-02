@@ -272,32 +272,6 @@ section {
   width: 30px;
 }
 
-.about-text {
-  background: var(--paper);
-  border-radius: 4px;
-  padding: 30px 32px;
-  box-shadow: var(--shadow);
-  position: relative;
-}
-
-.about-text .chapter-title {
-  font-family: "Schoolbell", cursive;
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 10px;
-  transition: opacity 0.3s ease;
-}
-.about-text .chapter-body {
-  font-size: 14.5px;
-  color: var(--muted);
-  font-weight: 500;
-  min-height: 70px;
-  transition: opacity 0.3s ease;
-}
-.about-text .fading {
-  opacity: 0;
-}
-
 .stack-hint {
   text-align: center;
   font-size: 12px;
